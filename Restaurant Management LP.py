@@ -1,3 +1,5 @@
+#Pre-Requisites:- 1) install tkinter 2) install openpyxl
+
 import tkinter as tk
 from tkinter import ttk
 from openpyxl import *
