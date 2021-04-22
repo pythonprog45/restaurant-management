@@ -6,12 +6,14 @@ from openpyxl import *
 from tkinter import messagebox
 
 root = tk.Tk()
-root.title("Hotel hungry")
+root.title("Hotel hungry")#you can change according to your hotel
 
-root.iconbitmap(r"C:\Users\Abhinav\Downloads\biryani_ExO_icon.ico")
+root.iconbitmap(r"C:\Users\Abhinav\Downloads\biryani_ExO_icon.ico")# pls change the icon location according to your file location
 
-wb = load_workbook(r"C:\Users\Abhinav\Desktop\Python\rmapp.xlsx")
+wb = load_workbook(r"C:\Users\Abhinav\Desktop\Python\rmapp.xlsx")# pls change the excel location according to your file location
 sheet = wb.active
+
+#you can change the items in the menu accordingly
 
 starter = ["< select your starters >", "None", "Veg Manchurian", "Tandoori", "Chicken 65", "Chicken Manchurian",
            "Gobi 65", "Noodles", "Samosa", "Chaat", "Pani Puri"]
@@ -136,7 +138,7 @@ def submit():
     sheet.cell(row=cur_row + 1, column=8).value = de_g
     sheet.cell(row=cur_row + 1, column=9).value = t_g
 
-    wb.save(r"C:\Users\Abhinav\Desktop\Python\rmapp.xlsx")
+    wb.save(r"C:\Users\Abhinav\Desktop\Python\rmapp.xlsx")#pls change this according to chosen file
     name_e.focus_set()
     name_e.delete(0, tk.END)
 
